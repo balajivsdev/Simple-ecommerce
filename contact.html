@@ -29,51 +29,22 @@
         <ul class="side-nav-links">
             <li><a href="index.html">Home</a></li>
             <li><a href="collection.html">Collections</a></li>
-            <li><a href="contact.html">Contact us</a></li>
+            <li><a href="#">Contact us</a></li>
         </ul>
     </div>
-    <div class="product-section">
-        <form class="product-search">
-            <input type="text" id="search" placeholder="Search">
-            <i class="fa-solid fa-magnifying-glass"></i>            
+    <div class="container">
+        <h2>Contact us</h2>
+        <form class="contact">
+            <label for="">Name:</label>
+            <input type="text">
+            <label for="">Email:</label>
+            <input type="text">
+            <label for="">Message:</label>
+            <textarea name="" id=""></textarea>
+            <button>Submit</button>
         </form>
-
-        <div class="products" id="products">
-            <div class="product-box">
-                <img src="white.jpg" alt="" width="200" height="200">
-                <p>White shirt</p>
-            </div>
-            <div class="product-box">
-                <img src="black.jpg" alt="" width="200" height="200">
-                <p>Black shirt</p>
-            </div>
-            <div class="product-box">
-                <img src="white.jpg" alt="" width="200" height="200">
-                <p>White shirt</p>
-            </div>
-            <div class="product-box">
-                <img src="black.jpg" alt="" width="200" height="200">
-                <p>Black shirt</p>
-            </div>
-            <div class="product-box">
-                <img src="white.jpg" alt="" width="200" height="200">
-                <p>White shirt</p>
-            </div>
-            <div class="product-box">
-                <img src="black.jpg" alt="" width="200" height="200">
-                <p>Black shirt</p>
-            </div>
-            <div class="product-box">
-                <img src="white.jpg" alt="" width="200" height="200">
-                <p>White shirt</p>
-            </div>
-            <div class="product-box">
-                <img src="black.jpg" alt="" width="200" height="200">
-                <p>Black shirt</p>
-            </div>
-        </div>
-
     </div>
+
      <div class="footer">
         <div class="footer-container">
             <h2 class="heading">Zooye</h2>
@@ -96,25 +67,5 @@
     function closenav(){
         sidenav.style.left='-70%';
     }
-
-    var productContainer = document.getElementById('products');
-    var search = document.getElementById('search');
-    var productList = productContainer.querySelectorAll('div');
-
-    search.addEventListener('keyup',function(e){
-        var enteredValue = e.target.value.toUpperCase();
-
-        for (let index = 0; index < productList.length; index=index+1) {
-                var productname = productList[index].querySelector('p').textContent;
-                if(productname.toUpperCase().indexOf(enteredValue) < 0){
-                    productList[index].style.display = "none";
-                }else{
-                    productList[index].style.display = "block";
-                }            
-        }
-
-
-    })
-
 </script>
 </html>
